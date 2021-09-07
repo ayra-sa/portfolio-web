@@ -20,7 +20,7 @@ export const projects = [
   {
     title: 'Youtube Clone',
     description: "A simple Youtube Clone. With the youtube API, build with React, React Hooks, Axios. You can search any video and watch it.",
-    image: '/images/youtube.png',
+    image: '/images/youtube.PNG',
     tags: ['React', 'React Hooks', 'Axios', 'API', 'Clone'],
     source: 'https://github.com/ayra-sa/react-youtube',
     visit: 'https://ayra-youtube.netlify.app',
@@ -38,7 +38,7 @@ export const projects = [
   {
     title: 'Blog App',
     description: "Simple Blog App with React and Gnews API. Build with React, React Hooks, Material UI, Axios. You can read articles at this app",
-    image: '/images/blog.png',
+    image: '/images/blog.PNG',
     tags: ['react', 'api', 'material ui', 'react-hooks', 'axios'],
     source: 'https://github.com/ayra-sa/react-blog',
     visit: 'https://ayra-blog.netlify.app',
@@ -56,7 +56,7 @@ export const projects = [
   {
     title: 'Quiz App',
     description: "Quizz App with Javascript. You can play mini quiz with right and wrong answer, and timer",
-    image: '/images/quizz.png',
+    image: '/images/quizz.PNG',
     tags: ['javascript', 'quiz', 'css'],
     source: 'https://github.com/ayra-sa/quiz-app',
     visit: 'https://ayra-sa.github.io/quiz-app',
@@ -65,7 +65,7 @@ export const projects = [
   {
     title: 'Weather App',
     description: "Weather App with API weather. You can search city's weather",
-    image: '/images/Weather-app.png',
+    image: '/images/Weather-App.png',
     tags: ['javascript', 'api', 'fetch-api','weather'],
     source: 'https://github.com/ayra-sa/weather-app',
     visit: 'https://ayra-sa.github.io/weather-app',
