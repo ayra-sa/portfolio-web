@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import { BlogCard, CardInfo, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Link, Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 import Paginate from '../../components/Pagination'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const Projects = () => {
   const [cards, setCards] = useState(projects.slice(0, 20))
@@ -17,12 +19,16 @@ const Projects = () => {
   const handleChange = ({selected}) => {
     setPage(selected)
   }
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  })
   
   const displayCards = cards
       .slice(cardsVisited, cardsVisited + cardsPage)
       .map(card => {
         return (
-          <BlogCard key={card.id}>
+          <BlogCard key={card.id} data-aos='fade-up'>
           <Img src={card.image} />
             <TitleContent>
               <HeaderThree title>{card.title}</HeaderThree>
@@ -30,7 +36,7 @@ const Projects = () => {
             </TitleContent>
             <CardInfo className="card-info">{card.description}</CardInfo>
             <div>
-              <TitleContent>Stack</TitleContent>
+              <TitleContent>Technology</TitleContent>
               <TagList>
                 {card.tags.map((t, i) => {
                   return <Tag key={i}>{t}</Tag>;
@@ -38,8 +44,8 @@ const Projects = () => {
               </TagList>
             </div>
             <UtilityList>
-              <Link href={card.visit}>Demo</Link>
-              <Link href={card.source}>Source</Link>
+              <Link href={card.visit} target='_blank'>Demo</Link>
+              <Link href={card.source} target='_blank'>Source</Link>
             </UtilityList>
           </BlogCard>
         );
@@ -50,30 +56,6 @@ const Projects = () => {
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
-        {/* {projects.map(p => {
-          return (
-            <BlogCard key={p.id}>
-              <Img src={p.image} />
-              <TitleContent>
-                <HeaderThree title>{p.title}</HeaderThree>
-                <Hr />
-              </TitleContent>
-              <CardInfo className="card-info">{p.description}</CardInfo>
-              <div>
-                <TitleContent>Stack</TitleContent>
-                <TagList>
-                  {p.tags.map((t, i) => {
-                    return <Tag key={i}>{t}</Tag>;
-                  })}
-                </TagList>
-              </div>
-              <UtilityList>
-                <Link href={p.visit} target='_blank'>Demo</Link>
-                <Link href={p.source} target='_blank'>Source</Link>
-              </UtilityList>
-            </BlogCard>
-          )
-         })} */}
         {displayCards}
     </GridContainer>
     <Paginate pageCount={pageCount} handleChange={handleChange} />

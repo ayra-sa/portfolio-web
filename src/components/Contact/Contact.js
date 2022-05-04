@@ -1,14 +1,19 @@
-import React from 'react'
+import Aos from 'aos'
+import React, { useEffect } from 'react'
 import { Section, SectionDivider } from '../../styles/GlobalComponents'
 import { ContactWrap, Screen, ScreenHeader, HeaderLeft, HClose, HMax, HMin, HeaderRight, HEllipsis, ScreenBody, BodyLeft, Title, Info, Span, BodyItem } from './ContactStyles'
 import Form from './Form'
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  })
+
   return (
     <Section column id='contact'>
       <SectionDivider divider />
       {/* <SectionTitle>Get In Touch</SectionTitle> */}
-        <ContactWrap>
+        <ContactWrap data-aos='fade-up'>
           <Screen>
             <ScreenHeader>
               <HeaderLeft>

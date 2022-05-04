@@ -4,4 +4,6 @@
 
 PORTFOLIO WEB
 
-Build with Next js and Styled Components
+Tech:
+- Next js
+- Styled Components

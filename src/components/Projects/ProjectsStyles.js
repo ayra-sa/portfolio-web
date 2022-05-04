@@ -33,6 +33,7 @@ export const BlogCard = styled.div`
   min-height: 500px;
   position: relative;
   transition: .3s ease;
+  overflow: hidden;
 
   &:hover {
     /* transform: translateY(-3px); */
