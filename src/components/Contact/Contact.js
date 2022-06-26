@@ -1,8 +1,9 @@
 import Aos from 'aos'
 import React, { useEffect } from 'react'
 import { Section, SectionDivider } from '../../styles/GlobalComponents'
-import { ContactWrap, Screen, ScreenHeader, HeaderLeft, HClose, HMax, HMin, HeaderRight, HEllipsis, ScreenBody, BodyLeft, Title, Info, Span, BodyItem } from './ContactStyles'
+import { ContactWrap, Screen, ScreenHeader, HeaderLeft, HClose, HMax, HMin, HeaderRight, HEllipsis, ScreenBody, BodyLeft, Title, Info, Span, BodyItem, ContactLink } from './ContactStyles'
 import Form from './Form'
+
 
 const Contact = () => {
   useEffect(() => {
@@ -33,7 +34,7 @@ const Contact = () => {
                   <Span>GET IN</Span>
                   <Span>TOUCH</Span>
                 </Title>
-                <Info>CONTACT INFO : +62 89 975 970 40</Info>
+                <Info>CONTACT INFO : <ContactLink href="https://wa.me/6285156898745" target="_blank">+62 8515 6898 745</ContactLink></Info>
               </BodyLeft>
               <BodyItem>
                 <Form />

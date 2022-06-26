@@ -28,6 +28,9 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  a:hover {
+    color: inherit;
+  }
   li{
     list-style: none;
   }

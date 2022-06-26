@@ -144,9 +144,11 @@ export const Span = styled.span`
 `
 export const Info = styled.div`
     margin-top: auto;
-    font-size: .6em;
+    font-size: .8em;
     color: ${props => props.theme.colors.darkgrey};
 `
+export const ContactLink = styled.a``
+
 export const FormGroup = styled.div`
     margin-bottom: 15px;
 `

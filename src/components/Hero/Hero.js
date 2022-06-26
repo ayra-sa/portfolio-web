@@ -19,7 +19,7 @@ const Hero = () => {
           My Personal Portfolio
         </SectionTitle>
         <SectionText data-aos='fade-up'>
-        Hello, <br />
+        Hello, 👋 <br />
         I'm Front End Developer
         </SectionText>
         {/* <Button href='#about'>Read More</Button> */}

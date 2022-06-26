@@ -1,3 +1,5 @@
+import { SiBootstrap, SiCss3, SiGit, SiGithub, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiReactrouter, SiRedux, SiSass, SiTailwindcss, SiWebflow } from "react-icons/si";
+
 export const projects = [
   {
     title: 'Landing Page',
@@ -84,8 +86,25 @@ export const TimeLineData = [
 export const abouts = {
     desc: "My name is Arya. I'm from Indonesian. I have more than two years work experience in front-end and have a firm knowledge of HTML, CSS and JavaScript language and possess a good knowledge of computer software packages (frameworks and tools) that are used in today’s technology.",
     desc2: "On a personal level, I am highly-motivated, result oriented, self-driven, hard-working, fast learner and constantly seeking to improve my skills and am fully aware of the latest Front-end Development Tools.",
-    image: '/images/me.png',
+    // image: '/images/me.png',
+    image: '/images/default.png',
     github: 'https://github.com/ayra-sa',
     linkedin: 'https://linkedin.com/in/rizkysaputra21',
     resume: '/asset/My Resume.pdf',
   }
+
+export const tech = [
+  {icon: <SiHtml5 />, label: 'HTML'},
+  {icon: <SiCss3 />, label: 'CSS'},
+  {icon: <SiJavascript />, label: 'Javascript'},
+  {icon: <SiBootstrap />, label: 'Bootstrap'},
+  {icon: <SiTailwindcss />, label: 'Tailwind CSS'},
+  {icon: <SiReact />, label: 'React js'},
+  {icon: <SiNextdotjs />, label: 'Next js'},
+  {icon: <SiReactrouter />, label: 'React Router'},
+  {icon: <SiRedux />, label: 'Redux'},
+  {icon: <SiGit />, label: 'Git'},
+  {icon: <SiGithub />, label: 'Github'},
+  {icon: <SiSass />, label: 'Sass/SCSS'},
+  {icon: <SiWebflow />, label: 'Webflow'},
+]

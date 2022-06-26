@@ -8,16 +8,29 @@ export const AboutWrap = styled.div`
     @media ${props => props.theme.breakpoints.md} {
       flex-direction: column;
     }
+    `
+
+export const AboutBottom = styled.div`
+  display: flex;
+  align-items: center;
+  
+  @media ${props => props.theme.breakpoints.md} {
+    flex-direction: column;
+  }
+`
+
+export const Left = styled.div`
+  flex: 1;
 `
 
 export const Profile = styled.figure`
-    flex: 1;
     text-align: center;
-
 `
 export const ImgMe = styled.img`
     max-width: 100%;
+    height: 400px;
 `
+export const Me = styled.div``
 export const Description = styled.div`
     flex: 1;
 `
@@ -122,6 +135,7 @@ export const Resume = styled.span`
   height: 55px;
   margin: 3rem 0;
   perspective: 1000px;
+  flex: 1;
 `
 export const ResumeDownload = styled.a`
   font-size: 19px;

@@ -3,9 +3,11 @@ import { FooterWrapper, Copyright } from './FooterStyles';
 import { RiCopyrightFill } from 'react-icons/ri'
 
 const Footer = () => {
+  const year = new Date().getFullYear()
+  
   return (
     <FooterWrapper>
-      <Copyright><RiCopyrightFill /> Arya 2021</Copyright>
+      <Copyright><RiCopyrightFill /> Arya {year}</Copyright>
     </FooterWrapper>
   );
 };

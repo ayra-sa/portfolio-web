@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-export const Img = styled.img`
-  width:100%;
-  max-height: 180px;
-  object-fit: cover;
-`
 
 export const GridContainer = styled.section`
 display: grid;
@@ -25,9 +20,9 @@ margin: 1rem 0;
 `
 export const BlogCard = styled.div`
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border-radius: 10px;
-  box-shadow: 2px 5px 38px 16px hsl(0deg 0% 85% / 11%);
+  /* box-shadow: 2px 5px 38px 16px hsl(0deg 0% 85% / 11%); */
   background-color: #fff;
   flex-direction: column;
   min-height: 500px;
@@ -35,10 +30,6 @@ export const BlogCard = styled.div`
   transition: .3s ease;
   overflow: hidden;
 
-  &:hover {
-    /* transform: translateY(-3px); */
-    box-shadow: 0 7px 50px -1px rgb(0 76 120 / 11%);
-  }
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -50,6 +41,17 @@ export const TitleContent = styled.div`
 
 `;
 
+export const BlogBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 20px;
+`
+
+export const BlogBodyTop = styled.div``
+
+export const BlogBodyBottom = styled.div``
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
