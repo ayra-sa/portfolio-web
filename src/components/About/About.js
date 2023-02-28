@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import {
   Section,
   SectionDivider,
@@ -13,48 +13,51 @@ import {
   Description,
   Text,
   LinkSos,
-  Resume,
-  ResumeDownload,
   Love,
   Check,
   Hearth,
   Contact,
-  ContactLink,
   LinkBelow,
+  LinkBelowMobile,
+  Right,
+  MyResume,
 } from "./AboutStyles";
 import { FaRegPaperPlane } from "react-icons/fa";
-import { MdInsertEmoticon } from "react-icons/md";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 const About = ({ image, desc, desc2, github, linkedin, resume }) => {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
-
+  
   return (
     <Section id="about">
       <SectionDivider divider />
-      <SectionTitle data-aos="fade-up">About Me</SectionTitle>
-      <AboutWrap>
+      <SectionTitle>About Me</SectionTitle>
+      <AboutWrap
+        as={motion.div}
+        initial={{
+          opacity: 0
+        }}
+        animate={{
+          opacity: 1
+        }}
+      >
         <Left>
           <Profile>
-            {/* <ImgMe src={image} alt='' data-aos='fade-up'/> */}
-            <ImgMe src={image} alt="" data-aos="fade-up" />
-            {/* <lottie-player
-              src="https://assets8.lottiefiles.com/packages/lf20_1pxqjqps.json"
-              background="transparent"
-              speed="1"
-              style={{width: '300px', height: '300px'}}
-              loop
-              autoplay
-            ></lottie-player> */}
+            <ImgMe src={image} alt="arya-sa" />
           </Profile>
+          <LinkBelowMobile>
+            <Love title="like">
+              <Check type="checkbox" />
+              <Hearth />
+            </Love>
+            <Contact href="#contact" title="contact me">
+              <FaRegPaperPlane />
+            </Contact>
+          </LinkBelowMobile>
         </Left>
         <Description>
-          <Text data-aos="fade-up">{desc}</Text>
-          <Text data-aos="fade-up">{desc2}</Text>
-          <Text data-aos="fade-up">
+          <Text>{desc}</Text>
+          <Text>{desc2}</Text>
+          <Text>
             Check my{" "}
             <LinkSos href={linkedin} target="_blank">
               Linkedin
@@ -64,27 +67,33 @@ const About = ({ image, desc, desc2, github, linkedin, resume }) => {
             <LinkSos href={github} target="_blank">
               Github
             </LinkSos>
-            , so let's explore <MdInsertEmoticon />
+            , so let's explore 😁
           </Text>
         </Description>
       </AboutWrap>
 
       <AboutBottom>
         <Left>
-          <LinkBelow data-aos="fade-up">
-            <Love>
+          <LinkBelow>
+            <Love title="like">
               <Check type="checkbox" />
               <Hearth />
             </Love>
-            <Contact href="#contact">
+            <Contact href="#contact" title="contact me">
               <FaRegPaperPlane />
             </Contact>
           </LinkBelow>
         </Left>
 
-        <Resume data-aos="fade-up">
-          <ResumeDownload href={resume}></ResumeDownload>
-        </Resume>
+        <Right>
+          <MyResume
+            href={resume}
+            download
+            title="Download My Resumé"
+          >
+            My Resume
+          </MyResume>
+        </Right>
       </AboutBottom>
     </Section>
   );

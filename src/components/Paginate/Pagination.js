@@ -1,9 +1,11 @@
 import React from "react";
 import ReactPaginate from 'react-paginate';
+import { PaginateWrap } from "./PaginationStyles";
 
 const Paginate = ({pageCount, handleChange}) => {
   return (
     <div>
+      <PaginateWrap>
         <ReactPaginate
           previousLabel={''}
           nextLabel={''}
@@ -11,12 +13,13 @@ const Paginate = ({pageCount, handleChange}) => {
           pageRangeDisplayed={5}
           onPageChange={handleChange}
           marginPagesDisplayed={5}
-          containerClassName={'pagination justify-content-center'}
-          pageClassName={'page-item'}
-          activeClassName={'page-item active'}
-          pageLinkClassName={'page-link'}
+          containerClassName={'container'}
+          pageClassName={'item'}
+          activeClassName={'item active'}
+          // pageLinkClassName={'page-link'}
         
         />
+      </PaginateWrap>
     </div>
   )
 }

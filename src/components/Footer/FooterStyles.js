@@ -6,7 +6,7 @@ export const FooterWrapper = styled.section`
 	/* width: calc(100vw - 96px);
 	max-width: 1040px; */
 	/* padding: 2rem 48px 40px; */
-	margin: 1rem auto;
+	margin: 20px auto;
 	box-sizing: content-box;
 
 
@@ -18,5 +18,6 @@ export const FooterWrapper = styled.section`
 export const Copyright = styled.h4`
 	display: flex;
   	align-items: center;
+	column-gap: 6px;
 	color: ${props => props.theme.colors.darkgrey}
 `

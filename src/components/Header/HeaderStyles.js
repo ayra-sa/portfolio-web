@@ -1,19 +1,29 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: absolute;
+  z-index: 11;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   padding-top: 2rem;
+  padding-inline: 6rem;
+  inset: 0 0 auto 0;
+  align-items: center;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 60px);
     grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    grid-row-gap: 0.5rem; */
+    padding-inline: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 `;
 export const Div1 = styled.div`
@@ -33,7 +43,7 @@ export const Div2 = styled.div`
     grid-area: 2 / 2 / 3 / 5;
   }
 `;
-export const Div3 = styled.ul`
+export const Div3 = styled(motion.ul)`
   grid-area: 1 / 5 / 2 / 6;
   gap: 4rem;
   display: flex;
@@ -69,15 +79,14 @@ export const MenuIcon = styled.div`
   display: none;
 
   @media ${props => props.theme.breakpoints.md} {
-    display: flex;
-    position: absolute;
+    display: block;
+    /* position: absolute; */
     color: ${props => props.theme.colors.darkgrey};
     /* top: 0; */
-    right: 0;
-    transform: translate(-100%, 60%);
+    /* right: 0; */
+    /* transform: translate(-100%, 60%); */
     cursor: pointer;
     font-size: 2rem;
-
   }
 `
 

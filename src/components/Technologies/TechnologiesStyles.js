@@ -1,4 +1,12 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
+
+export const TechnologiesSection = styled.section`
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: center;
+  /* background-color: #A5C9CA; */
+`
 
 export const ImageContainer = styled.div`
   text-align: center;
@@ -42,13 +50,15 @@ export const List = styled.ul`
   }
   
   @media ${props => props.theme.breakpoints.sm}{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
+    display: grid;
     /* flex-direction: column; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    margin: 32px 0;
-    gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    /* margin: 32px 0; */
+    gap: 2rem;
+    padding-left: 0;
   }
 `
 
@@ -89,7 +99,7 @@ export const ListParagraph = styled.p`
   }
 `
 
-export const ListItem = styled.li`
+export const ListItem = styled(motion.li)`
   height: auto;
   width: 150px;
   font-size: 1.5em;
@@ -105,11 +115,11 @@ export const ListItem = styled.li`
   color: ${props => props.theme.colors.darkgrey};
   transition: .3s all;
 
-  &:hover {
+  /* &:hover {
     color: #fff;
     background-color: ${props => props.theme.colors.darkgrey};
 
-  }
+  } */
 
 @media ${props => props.theme.breakpoints.md}{
   max-width: 203px;
@@ -117,7 +127,8 @@ export const ListItem = styled.li`
 
 @media ${props => props.theme.breakpoints.sm}{
   margin-bottom: 14px;
-  max-width: 320px;
+  /* max-width: 320px; */
+  width: 100%;
   /* flex-direction: row; */
 }
 `

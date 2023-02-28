@@ -1,34 +1,75 @@
-import React, { useEffect } from 'react';
-import { Link, Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { LeftSection } from './HeroStyles';
-import Aos from 'aos';
-import 'aos/dist/aos.css'
+import { Controls, Player } from "@lottiefiles/react-lottie-player";
+import React from "react";
+import { TypeAnimation } from "react-type-animation";
+import {
+  Link,
+  Section,
+  SectionText,
+  SectionTitle,
+} from "../../styles/GlobalComponents";
+import BackgroundAnimation from "../BackgrooundAnimation/BackgroundAnimation";
+import {
+  HeroSection,
+  HeroBackground,
+  HeroTitle,
+  HeroText,
+  LeftSection,
+  CTAButton,
+  WavingHand,
+  ScrollMe,
+  Photo,
+  MyRole,
+  MyType
+} from "./HeroStyles";
 
-
-const Hero = () => {
-
-  useEffect(() => {
-    Aos.init({ duration: 1000 })
-  }, [])
-
+const Hero = ({ welcome, image, text1, text2, text3 }) => {
   return (
-    <Section row nopadding>
+    <HeroSection>
+      <HeroBackground>{/* <BackgroundAnimation /> */}</HeroBackground>
       <LeftSection>
-        <SectionTitle main center data-aos='fade-up'>
-          Welcome To <br />
-          My Personal Portfolio
-        </SectionTitle>
-        <SectionText data-aos='fade-up'>
-        Hello, 👋 <br />
-        I'm Front End Developer
-        </SectionText>
-        {/* <Button href='#about'>Read More</Button> */}
-        <div style={{ width: 'auto' }} data-aos='fade-up'>
+        <HeroTitle>
+          {welcome}
+        </HeroTitle>
+        <Photo src={image} alt="arya-sa" title="Hi, don't touch me!" />
+        <MyRole>FRONTEND DEVELOPER</MyRole>
+        <MyType>
+          <TypeAnimation
+            sequence={[
+              "Hi, The name's Arya",
+              1000,
+              "Guy-Who-Loves-Coffee☕.jsx",
+              2000,
+              "<LoveCodeToo />",
+              3000
+            ]}
+            wrapper="p"
+            cursor={true}
+            repeat={Infinity}
+            // style={{ 
+            //   fontSize: '2em', 
+            //   fontWeight: '600'
+            // }}
+          />
+        </MyType>
+        <CTAButton>
           <Link href="#about">Read More</Link>
-        </div>
+        </CTAButton>
       </LeftSection>
-    </Section>
-  )
+      <ScrollMe>
+        <Player
+          autoplay
+          loop
+          src="https://assets4.lottiefiles.com/packages/lf20_b2oxjsii.json"
+          style={{
+            width: "120px",
+            // height: "100px",
+          }}
+        >
+          <Controls visible={false} />
+        </Player>
+      </ScrollMe>
+    </HeroSection>
+  );
 };
 
 export default Hero;

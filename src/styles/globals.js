@@ -12,7 +12,6 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-
   }
   body {
     font-family: ${props => props.theme.fonts.main};
@@ -22,6 +21,11 @@ const GlobalStyles = createGlobalStyle`
     cursor: default;
 
   }
+  /* main {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+  } */
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${props => props.theme.fonts.title};
   }

@@ -49,7 +49,11 @@ export const BlogBody = styled.div`
   margin-top: 20px;
 `
 
-export const BlogBodyTop = styled.div``
+export const BlogBodyTop = styled.div`
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding-inline: 20px;
+  }
+`
 
 export const BlogBodyBottom = styled.div``
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import {
   BlogCard,
@@ -21,11 +21,9 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
-import Paginate from "../../components/Pagination";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import Image from 'next/image'
-
+// import Paginate from "../../components/Pagination";
+import Image from "next/image";
+import Paginate from "../Paginate/Pagination";
 
 const Projects = () => {
   const [cards, setCards] = useState(projects.slice(0, 20));
@@ -40,16 +38,22 @@ const Projects = () => {
     setPage(selected);
   };
 
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  });
-
   const displayCards = cards
     .slice(cardsVisited, cardsVisited + cardsPage)
     .map((card) => {
+      
+      // const parser = new DOMParser();
+      // const node = parser.parseFromString(card.description, "text/html");
+      // console.log(node.body.innerHTML);
+
       return (
-        <BlogCard key={card.id} data-aos="fade-up">
-          <Image src={card.image} layout='responsive' width={300} height={200} />
+        <BlogCard key={card.id}>
+          <Image
+            src={card.image}
+            layout="responsive"
+            width={300}
+            height={200}
+          />
           <BlogBody>
             <BlogBodyTop>
               <TitleContent>
@@ -83,7 +87,7 @@ const Projects = () => {
     });
 
   return (
-    <Section nopadding id="projects">
+    <Section id="projects">
       <SectionDivider />
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>{displayCards}</GridContainer>
