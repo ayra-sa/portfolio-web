@@ -5,7 +5,7 @@ import Technologies from "../components/Technologies/Technologies";
 import About from "../components/About/About";
 import { abouts, hero } from "../constants/constants";
 import Contact from "../components/Contact/Contact";
-import { Layout } from "../Layout/Layout";
+import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
 
 const Home = () => {

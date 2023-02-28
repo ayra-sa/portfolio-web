@@ -26,7 +26,7 @@ export const Container = styled.div`
     justify-content: space-between;
   }
 `;
-export const Div1 = styled.div`
+export const Div1 = styled(motion.div)`
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: row;

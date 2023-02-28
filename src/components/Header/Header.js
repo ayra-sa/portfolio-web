@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React, {useState} from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -13,7 +14,20 @@ const Header = () => {
 
   return (
     <Container>
-      <Div1>
+      <Div1
+        as={motion.div}
+        initial={{
+          opacity: 0,
+          translateX: -50,
+        }}
+        transition={{
+          duration: .5
+        }}
+        animate={{
+          opacity: 1,
+          translateX: 0
+        }}
+      >
         <Link href="#">
           <Logo>arya</Logo>
         </Link>
