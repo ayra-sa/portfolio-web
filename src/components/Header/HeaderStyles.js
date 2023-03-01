@@ -14,12 +14,7 @@ export const Container = styled.div`
   inset: 0 0 auto 0;
   align-items: center;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem; */
+  @media ${(props) => props.theme.breakpoints.md} {
     padding-inline: 2rem;
     display: flex;
     align-items: center;
@@ -80,11 +75,7 @@ export const MenuIcon = styled.div`
 
   @media ${props => props.theme.breakpoints.md} {
     display: block;
-    /* position: absolute; */
     color: ${props => props.theme.colors.darkgrey};
-    /* top: 0; */
-    /* right: 0; */
-    /* transform: translate(-100%, 60%); */
     cursor: pointer;
     font-size: 2rem;
   }
@@ -95,7 +86,11 @@ export const Logo = styled.a`
   font-weight: 700;
   cursor: pointer;
   color: ${props => props.theme.colors.darkgrey};
+  
+  &:hover {
+    color: ${props => props.theme.colors.darkgrey};
 
+  }
 `
 
 // Navigation Links

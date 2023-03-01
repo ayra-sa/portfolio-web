@@ -13,12 +13,6 @@ export const HeroSection = styled.section`
   color: #E7F6F2; */
 `;
 
-export const HeroBackground = styled.div`
-  /* position: absolute;
-  inset: 0; */
-  /* background-color: red; */
-`;
-
 export const HeroTitle = styled.h1`
   font-size: 4em;
   font-weight: 700;
@@ -26,6 +20,10 @@ export const HeroTitle = styled.h1`
   align-items: flex-end;
   justify-content: center;
   position: relative;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 3em;
+  }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 2.75em;
@@ -78,7 +76,7 @@ export const ScrollMe = styled.div`
   position: absolute;
   inset: auto auto 5% auto;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.md} {
     inset: auto auto 2% auto;
   }
 `

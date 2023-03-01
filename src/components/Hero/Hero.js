@@ -7,15 +7,11 @@ import {
   SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import BackgroundAnimation from "../BackgrooundAnimation/BackgroundAnimation";
 import {
   HeroSection,
-  HeroBackground,
   HeroTitle,
-  HeroText,
   LeftSection,
   CTAButton,
-  WavingHand,
   ScrollMe,
   Photo,
   MyRole,
@@ -25,7 +21,6 @@ import {
 const Hero = ({ welcome, image, text1, text2, text3 }) => {
   return (
     <HeroSection>
-      <HeroBackground>{/* <BackgroundAnimation /> */}</HeroBackground>
       <LeftSection>
         <HeroTitle>
           {welcome}
