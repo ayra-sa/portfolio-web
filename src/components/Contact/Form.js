@@ -28,8 +28,8 @@ const Form = () => {
       )
       .then(
         (result) => {
-          console.log(form.current);
-          console.log(result);
+          // console.log(form.current);
+          // console.log(result);
           e.target.reset();
           setResult(true);
         },
