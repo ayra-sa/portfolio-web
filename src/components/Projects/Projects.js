@@ -24,6 +24,7 @@ import { projects } from "../../constants/constants";
 // import Paginate from "../../components/Pagination";
 import Image from "next/image";
 import Paginate from "../Paginate/Pagination";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const [cards, setCards] = useState(projects.slice(0, 20));
@@ -47,7 +48,24 @@ const Projects = () => {
       // console.log(node.body.innerHTML);
 
       return (
-        <BlogCard key={card.id}>
+        <BlogCard 
+          key={card.id}
+          as={motion.div}
+          initial={{
+            y: 50,
+            opacity: 0
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1
+          }}
+          transition={{
+            duration: 1.2
+          }}
+          viewport={{
+            once: true
+          }}
+        >
           <Image
             src={card.image}
             layout="responsive"

@@ -65,7 +65,7 @@ export const projects = [
   {
     title: 'Frontend Mentor Solutions',
     description: "This is a collection of answers from challenges on frontendmentor.io, I collected them together and can be selected according to the criteria for the challenge. you will find various kinds of technology here",
-    image: '/images/Weather-App.png',
+    image: '/images/frontend-mentor.png',
     tags: ['html', 'css', 'javascript', 'reactjs'],
     source: 'https://github.com/ayra-sa/frontend-mentor',
     visit: 'https://ayra-sa.github.io/frontend-mentor/',

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React, { useRef, useState } from "react";
+import emailjs from '@emailjs/browser'
 import {
   FormMessage,
   FormGroup,
@@ -13,34 +13,37 @@ import {
 const Form = () => {
   const [result, setResult] = useState(false);
 
+  const form = useRef()
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_298va8b",
-        "template_hriy74c",
-        e.target,
-        "user_ey2F1AlTyMpuyUgHZkWWn"
+        "service_rae278j",
+        "template_qznn0ls",
+        // e.target,
+        form.current,
+        "oosYjcKm5TLaE8Hp0"
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(form.current);
+          console.log(result);
+          e.target.reset();
+          setResult(true);
         },
         (error) => {
           console.log(error.text);
         }
       );
-
-    e.target.reset();
-    setResult(true);
   };
 
   setTimeout(() => {
     setResult(false);
   }, 5000);
   return (
-    <form onSubmit={sendEmail}>
+    <form onSubmit={sendEmail} ref={form}>
       <FormGroup>
         <Input placeholder="NAME" type="text" name="name" required autoComplete="off" />
       </FormGroup>
@@ -51,7 +54,7 @@ const Form = () => {
         <MessageMe placeholder="MESSAGE" name="message" required />
       </FormMessage>
       <FormButton>
-        <Button>SEND</Button>
+        <Button type="submit">SEND</Button>
       </FormButton>
       <div style={{ textAlign: "center" }}>
         {result ? <Result>Thank's. Your Message has been sent</Result> : null}

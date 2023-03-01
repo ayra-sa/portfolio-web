@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 
-export const AboutWrap = styled(motion.div)`
+export const AboutWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,7 +23,7 @@ export const AboutBottom = styled.div`
 
 `;
 
-export const Left = styled.div`
+export const Left = styled(motion.div)`
   flex: 1;
 `;
 
@@ -43,7 +43,7 @@ export const ImgMe = styled.img`
   height: 400px;
 `;
 export const Me = styled.div``;
-export const Description = styled.div`
+export const Description = styled(motion.div)`
   flex: 1;
 `;
 export const Text = styled.p`

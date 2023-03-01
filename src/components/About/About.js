@@ -31,16 +31,24 @@ const About = ({ image, desc, desc2, github, linkedin, resume }) => {
     <Section id="about">
       <SectionDivider divider />
       <SectionTitle>About Me</SectionTitle>
-      <AboutWrap
-        as={motion.div}
-        initial={{
-          opacity: 0
-        }}
-        animate={{
-          opacity: 1
-        }}
-      >
-        <Left>
+      <AboutWrap>
+        <Left
+          as={motion.div}
+          initial={{
+            opacity: 0,
+            x: -100
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0
+          }}
+          transition={{
+            duration: 1
+          }}
+          viewport={{
+            once: true
+          }}
+        >
           <Profile>
             <ImgMe src={image} alt="arya-sa" />
           </Profile>
@@ -54,7 +62,23 @@ const About = ({ image, desc, desc2, github, linkedin, resume }) => {
             </Contact>
           </LinkBelowMobile>
         </Left>
-        <Description>
+        <Description
+          as={motion.div}
+          initial={{
+            opacity: 0,
+            x: 100
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0
+          }}
+          transition={{
+            duration: 1
+          }}
+          viewport={{
+            once: true
+          }}
+        >
           <Text>{desc}</Text>
           <Text>{desc2}</Text>
           <Text>

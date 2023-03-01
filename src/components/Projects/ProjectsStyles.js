@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 
@@ -18,7 +19,7 @@ margin: 1rem 0;
 }
 
 `
-export const BlogCard = styled.div`
+export const BlogCard = styled(motion.div)`
   display: flex;
   /* justify-content: space-between; */
   border-radius: 10px;
