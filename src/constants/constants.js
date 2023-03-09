@@ -37,11 +37,11 @@ export const projects = [
   },
   {
     title: 'Blog App',
-    description: "Simple Blog App with React and Gnews API. Build with React, React Hooks, Material UI, Axios. You can read articles at this app",
+    description: "Simple Blog App with Next.js and powerfull headless CMS, Sanity.io. The Blog is clean and fast, and also flexible with Sanity.",
     image: '/images/blog.PNG',
-    tags: ['react', 'api', 'material ui', 'react-hooks', 'axios'],
-    source: 'https://github.com/ayra-sa/react-blog',
-    visit: 'https://ayra-blog.netlify.app',
+    tags: ['nextjs', 'sanity', 'tailwind-css', 'typescript'],
+    source: 'https://github.com/ayra-sa/my-blog',
+    visit: 'https://my-next-sanity-blog.vercel.app/',
     id: 2,
   },
   {
