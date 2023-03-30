@@ -17,20 +17,6 @@ return (
       {tech.map((item, i) => (
         <ListItem 
           as={motion.li}
-          initial={{
-            y: 80,
-            opacity: 0
-          }}
-          whileInView={{
-            y: 0,
-            opacity: 1
-          }}
-          transition={{
-            duration: 1.2
-          }}
-          viewport={{
-            once: true
-          }}
           key={i}
           whileHover={{
             scale: '1.1'

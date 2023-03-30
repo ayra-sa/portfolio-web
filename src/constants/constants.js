@@ -1,11 +1,6 @@
 import { SiBootstrap, SiCss3, SiGit, SiGithub, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiReactrouter, SiRedux, SiSass, SiTailwindcss, SiTypescript, SiWebflow } from "react-icons/si";
 
 
-const url = "https://www.frontendmentor.io/home"
-// const an = document.createElement("a")
-// an.innerHTML = "Frontend Mentor"
-// const myLink = an
-
 
 export const hero = {
   welcome: "Welcome 👋🏼",
@@ -18,67 +13,43 @@ export const hero = {
 
 export const projects = [
   {
-    title: 'Landing Page',
-    description: "Using HTML5, CSS3 and Javascript. Simple Landing Page to show little bit about coffee",
-    image: '/images/Kopi-landing.jpeg',
-    tags: ['HTML5', 'CSS3', 'Javascript'],
-    source: 'https://github.com/ayra-sa/landing-page',
-    visit: 'https://ayra-sa.github.io/landing-page',
-    id: 0,
-  },
-  {
-    title: 'Youtube Clone',
-    description: "A simple Youtube Clone. With the youtube API, build with React, React Hooks, Axios. You can search any video and watch it.",
-    image: '/images/youtube.PNG',
-    tags: ['React', 'React Hooks', 'Axios', 'API', 'Clone'],
-    source: 'https://github.com/ayra-sa/react-youtube',
-    visit: 'https://ayra-youtube.netlify.app',
-    id: 1,
-  },
-  {
-    title: 'Blog App',
-    description: "Simple Blog App with Next.js and powerfull headless CMS, Sanity.io. The Blog is clean and fast, and also flexible with Sanity.",
-    image: '/images/blog.PNG',
-    tags: ['nextjs', 'sanity', 'tailwind-css', 'typescript'],
+    id: 'arya-blog',
+    title: 'Arya Blog',
+    description: "A modern blog web-based app which is integrated with Sanity.io, a headless CMS",
+    image: '/images/preview-blog.png',
+    tags: ['Nextjs', 'Sanity', 'tailwind css'],
+    full_title: 'Arya Blog - A blog app with Sanity.io',
+    full_description: 'Arya Blog is a modern blog web-based app which is integrated with Sanity.io, a headless CMS.  This Blog can be considered a personal blog publishing which is you can write your blog and publish it to Blog via Sanity. The key point in this project is the technology I used, especially Next.js. This one is so powerful and a bit complicated for sure. All blogs there come from Sanity which I already managed it before writing the code.',
+    built_with: ['Next js', 'Sanity', 'tailwind css', 'Typescript' ],
+    image_description: ['/images/blog-1.jpg', '/images/blog-full.png'],
     source: 'https://github.com/ayra-sa/my-blog',
     visit: 'https://my-next-sanity-blog.vercel.app/',
-    id: 2,
   },
   {
-    title: 'Gallery App',
-    description: "Gallery App with Unsplash API. Build with React, React Hooks, Axios, Infinite Scroll. See various pictures here.",
-    image: '/images/gallery-app.jpeg',
-    tags: ['react', 'api', 'infinite-scroll', 'react-hooks', 'axios'],
-    source: 'https://github.com/ayra-sa/react-gallery',
-    visit: 'https://ayra-gallery.netlify.app',
-    id: 3,
+    id: 'metube',
+    title: 'MeTube',
+    description: "Youtube Clone app which is integrated with Rapid API Youtube v3",
+    image: '/images/metube.png',
+    tags: ['Reactjs', 'rapid api', 'tailwind css'],
+    full_title: 'MeTube - Youtube Clone App',
+    full_description: 'MeTube is a Youtube Clone which is integrated with Rapid API, Youtube v3 API. MeTube can be considered a web app which is you can search and watch any video in this app. The key point in this project is the technology I used, especially React.js. This one is so powerful and a bit complicated for sure. The videos there come from Youtube v3 API which I already managed it before writing the code.',
+    built_with: ['Next js', 'Sanity', 'tailwind css', 'Typescript' ],
+    image_description: ['/images/metube-1.jpg', '/images/metube-2.jpg'],
+    source: 'https://github.com/ayra-sa/youtube-clone-app',
+    visit: 'https://metube-app.vercel.app/',
   },
   {
-    title: 'Quiz App',
-    description: "Quizz App with Javascript. You can play mini quiz with right and wrong answer, and timer",
-    image: '/images/quizz.PNG',
-    tags: ['javascript', 'quiz', 'css'],
-    source: 'https://github.com/ayra-sa/quiz-app',
-    visit: 'https://ayra-sa.github.io/quiz-app',
-    id: 4,
-  },
-  {
+    id: 'fementor-solutions',
     title: 'Frontend Mentor Solutions',
-    description: "This is a collection of answers from challenges on frontendmentor.io, I collected them together and can be selected according to the criteria for the challenge. you will find various kinds of technology here",
-    image: '/images/frontend-mentor.png',
-    tags: ['html', 'css', 'javascript', 'reactjs'],
+    description: "Collection of answers from challenges of frontendmentor.io",
+    image: '/images/fementor.png',
+    tags: ['Reactjs', 'tailwind css'],
+    full_title: 'Frontend Mentor Solutions - from challenges of frontendmentor.io',
+    full_description: <span>This is a collection of answers from challenges on <a href="https://www.frontendmentor.io/challenges" target='_blank'>frontendmentor.io</a>, I collected them together and can be selected according to the criteria for the challenge. you will find various kinds of technology here</span>,
+    built_with: ['Next js', 'Sanity', 'tailwind css', 'Typescript' ],
+    image_description: ['/images/fementor-1.jpg',],
     source: 'https://github.com/ayra-sa/frontend-mentor',
     visit: 'https://ayra-sa.github.io/frontend-mentor/',
-    id: 5,
-  },
-  {
-    title: 'Weather App',
-    description: "Weather App with API weather. You can search city's weather",
-    image: '/images/Weather-App.png',
-    tags: ['javascript', 'api', 'fetch-api','weather'],
-    source: 'https://github.com/ayra-sa/weather-app',
-    visit: 'https://ayra-sa.github.io/weather-app',
-    id: 6,
   },
 ];
 

@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import Link from 'next/link'
 
 
 export const GridContainer = styled.section`
 display: grid;
 /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(2, 1fr);
 padding: 1rem;
 column-gap: 2rem;
 gap: 2rem;
@@ -21,20 +22,44 @@ margin: 1rem 0;
 `
 export const BlogCard = styled(motion.div)`
   display: flex;
-  /* justify-content: space-between; */
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
   border-radius: 10px;
+  color: inherit;
   /* box-shadow: 2px 5px 38px 16px hsl(0deg 0% 85% / 11%); */
   background-color: #fff;
   flex-direction: column;
-  min-height: 500px;
+  /* min-height: 500px; */
   position: relative;
   transition: .3s ease;
-  overflow: hidden;
+  cursor: pointer;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
 `;
+
+export const BlogFront = styled.div`
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 40px;
+  place-content: center;
+  align-items: center;
+  background-color: rgba(221, 221, 221, .8);
+  transition: all .2s ease-in;
+  z-index: 4;
+
+  &:hover {
+    /* display: none; */
+    opacity: 0;
+  }
+`
+
+export const Desc = styled.p`
+  font-weight: 500;
+`
+
 export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
