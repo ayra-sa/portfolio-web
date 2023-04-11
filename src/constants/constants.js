@@ -58,11 +58,11 @@ export const projects = [
     image: '/images/disnep.png',
     tags: ['Nextjs', 'Firebase', 'tailwind css'],
     full_title: 'Disney+ Clone App with TMDB API',
-    full_description: <span>This is a collection of answers from challenges on <a href="https://www.frontendmentor.io/challenges" target='_blank'>frontendmentor.io</a>, I collected them together and can be selected according to the criteria for the challenge. you will find various kinds of technology here</span>,
+    full_description: "This is a Disney+ clone app, which is integrated with TMDB API. This app can be considered a web app which is you can search any movie and tv series and watch the trailer in this app. The key point in this project is the technology I used, especially Next.js. This one is so powerful and a bit complicated for sure. For example, you can sign in with your google account and log out again, and of course it's all safe",
     built_with: ['Next js', 'next-auth', 'firebase', 'tailwind css', 'Typescript' ],
     image_description: ['/images/disnep-login.jpg', '/images/disnep-home.jpg', '/images/disnep-detail.jpg'],
-    source: 'https://github.com/ayra-sa/frontend-mentor',
-    visit: 'https://ayra-sa.github.io/frontend-mentor/',
+    source: 'https://github.com/ayra-sa/next-disney-clone',
+    visit: 'https://next-disney-clone.vercel.app/',
   },
 ];
 
