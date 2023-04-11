@@ -94,7 +94,7 @@ export const ListParagraph = styled.p`
   }
 
   @media ${props => props.theme.breakpoints.sm}{
-    font-size: 14px;
+    font-size: 10px;
     line-height: 22px;
   }
 `

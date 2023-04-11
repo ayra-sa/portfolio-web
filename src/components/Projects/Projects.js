@@ -7,6 +7,8 @@ import {
   TagList,
   BlogFront,
   Desc,
+  Heading1
+
 } from "./ProjectsStyles";
 import {
   Section,
@@ -64,7 +66,7 @@ const Projects = () => {
               priority
             />
             <BlogFront>
-              <h1>{card.title}</h1>
+              <Heading1>{card.title}</Heading1>
               <Desc>{card.description}</Desc>
               <TagList>
                 {card.tags.map((tag) => {

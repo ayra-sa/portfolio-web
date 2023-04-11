@@ -54,6 +54,21 @@ export const BlogFront = styled.div`
     /* display: none; */
     opacity: 0;
   }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding-inline: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+`
+
+export const Heading1 = styled.h1`
+  font-size: 2em;
+  font-weight: 700;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 1.2em;
+  }
 `
 
 export const Desc = styled.p`
@@ -164,4 +179,8 @@ export const Tag = styled.li`
   text-transform: lowercase;
   border-radius: 50px;
   padding: .4rem .8rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: .8em;
+  }
 `

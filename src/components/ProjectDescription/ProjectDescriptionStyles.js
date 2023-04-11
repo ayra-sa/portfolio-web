@@ -21,6 +21,11 @@ export const TopDiv = styled.div`
   display: flex;
   column-gap: 20px;
   margin-bottom: 100px;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    flex-direction: column;
+    row-gap: 50px;
+  }
 `;
 
 export const LeftDiv = styled.div`
