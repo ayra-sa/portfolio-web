@@ -64,6 +64,19 @@ export const projects = [
     source: 'https://github.com/ayra-sa/next-disney-clone',
     visit: 'https://next-disney-clone.vercel.app/',
   },
+  {
+    id: 'ayshop-ecommerce',
+    title: 'AyShop - E-commerce App',
+    description: "AyShop is E-commerce App which integreted with Stripe",
+    image: '/images/ayshop-main.png',
+    tags: ['Nextjs', 'Sanity', 'Stripe', 'tailwind css', 'Typescript'],
+    full_title: 'AyShop E-cpmmerce App with Stripe',
+    full_description: "AyShop is a e-commerce app, which is integrated with Stripe. Who sell electronic products, using sanity as a product store, and you can add products to the basket, and checkout using stripe, you can use a certain credit card number to be able to use it in test mode",
+    built_with: ['Next js', 'Sanity', 'tailwind css', 'Typescript' ],
+    image_description: ['/images/ayshop.jpg', '/images/ayshop-2.jpg', '/images/ayshop-3.jpg', '/images/ayshop-4.jpg'],
+    source: 'https://github.com/ayra-sa/ecommerce-app',
+    visit: 'https://ayshop.vercel.app/',
+  },
 ];
 
 export const TimeLineData = [

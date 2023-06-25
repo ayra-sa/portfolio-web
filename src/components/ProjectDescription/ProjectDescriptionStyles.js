@@ -76,4 +76,5 @@ export const Block = styled.div`
 
 export const LinkTo = styled.a`
   color: inherit;
+  text-decoration: underline;
 `
